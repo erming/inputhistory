@@ -15,7 +15,7 @@ pre {
 }
 #messages {
 	color: #ccc;
-	height: 240px;
+	height: 180px;
 	overflow-y: scroll;
 }
 #messages .intro {

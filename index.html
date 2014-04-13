@@ -22,8 +22,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12">
-				<form>
+			<form class="col-sm-12">
 				<div class="panel panel-default">
 					<div id="messages" class="panel-body">
 						<div class="intro">Welcome!</div>
@@ -44,8 +43,7 @@
 						</div>
 					</div>
 				</div>
-				</form>
-			</div>
+			</form>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
@@ -61,6 +59,7 @@
 	</div>
 	
 	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="http://erming.github.io/jquery-scroll-glue/jquery.scrollGlue.js"></script>
 	<script src="jquery.inputHistory.js"></script>
 	<script>
 	$(function() {
@@ -84,13 +83,14 @@
 			return false;
 		});
 		
-		var messages = $("#messages");
+		var messages = $("#messages").scrollGlue({
+			speed: 200,
+		});
 		
 		function addMessage(msg) {
 			messages.append($("<div>").html(msg));
 		}
 	});
-	
 	</script>
 	
 	</body>
