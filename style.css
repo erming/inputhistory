@@ -1,3 +1,15 @@
 body {
-	background: #fff;
+	margin: 10px 0 30px;
+}
+pre {
+	overflow-x: auto;
+	word-wrap: normal;
+}
+#content {
+	max-width: 620px;
+}
+#version {
+	color: #bbb;
+	margin-top: 10px;
+	text-align: center;
 }
