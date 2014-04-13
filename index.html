@@ -23,8 +23,27 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<form class="jumbotron">
-					<input id="input" class="form-control" type="text" autofocus>
+				<form>
+				<div class="panel panel-default">
+					<div id="messages" class="panel-body">
+						<div class="intro">Welcome!</div>
+						<div class="intro">This is the interactive demo of jquery.inputHistory.js</div>
+						<div class="intro"></div>
+						<div class="intro">Step 1: Type something</div>
+						<div class="intro">Step 2: Press the <kbd>up</kbd> and <kbd>down</kbd> keys</div>
+						<div class="intro"></div>
+					</div>
+					<div class="panel-footer">
+						<div class="input-group">
+						
+						<input id="input" class="form-control" type="text" autofocus>
+						<span class="input-group-btn">
+							<button id="send" class="btn btn-warning">Send</button>
+						</span>
+						
+						</div>
+					</div>
+				</div>
 				</form>
 			</div>
 		</div>
@@ -45,8 +64,33 @@
 	<script src="jquery.inputHistory.js"></script>
 	<script>
 	$(function() {
-		$("#input").inputHistory();
+		var input = $("#input").inputHistory({
+			submit: true,
+		});
+		
+		var form = $("form");
+		form.on("submit", function() {
+			var val = input.val();
+			if (val != "") {
+				addMessage(val);
+			}
+			return false;
+		});
+		
+		$("#send").on("click", function() {
+			var e = $.Event("keydown");
+			e.which = 13;
+			input.trigger(e);
+			return false;
+		});
+		
+		var messages = $("#messages");
+		
+		function addMessage(msg) {
+			messages.append($("<div>").html(msg));
+		}
 	});
+	
 	</script>
 	
 	</body>

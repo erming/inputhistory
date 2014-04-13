@@ -38,9 +38,8 @@
 				}
 				if (settings.submit) {
 					self.parents('form').eq(0).submit();
-				} else {
-					self.val('');
 				}
+				self.val('');
 				break;
 			
 			case 38: // Up
@@ -61,5 +60,7 @@
 			
 			return false;
 		});
+		
+		return this;
 	}
 })(jQuery);
