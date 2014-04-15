@@ -1,6 +1,6 @@
 /*!
- * jquery-input-history
- * https://github.com/erming/jquery-input-history
+ * inputHistory
+ * https://github.com/erming/inputHistory
  *
  * Copyright (c) 2014 Mattias Erming <mattias@mattiaserming.com>
  * Licensed under the MIT License.
