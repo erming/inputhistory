@@ -5,6 +5,9 @@ pre {
 	overflow-x: auto;
 	word-wrap: normal;
 }
+input:valid + #label {
+	color: #999;
+}
 .form-control:focus {
 	border-color: #ccc;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -22,14 +25,25 @@ pre {
 	min-height: 1em;
 	color: #000;
 }
-#input {
-	border-right: 0;
-}
-#input + .input-group-btn {
-	padding-left: 1px;
+#label {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	color: #ccc;
+	font-weight: normal;
+	font-size: 13px;
+	margin-top: -26px;
+	position: absolute;
+	right: 45px;
+	transition: all .3s;
 }
 #version {
 	color: #bbb;
 	margin-top: 10px;
 	text-align: center;
+}
+
+@media (max-width: 480px) {
+  #label {
+	opacity: 0;
+  }
 }
