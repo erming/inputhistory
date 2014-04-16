@@ -6,7 +6,7 @@ pre {
 	word-wrap: normal;
 }
 input:valid + #label {
-	color: #999;
+	color: #777;
 }
 .form-control:focus {
 	border-color: #ccc;
@@ -43,9 +43,9 @@ input:valid + #label {
 }
 
 @media (max-width: 480px) {
-  #label {
-	opacity: 0;
-  }
+	#label {
+		opacity: 0;
+	}
 }
 
 .com { color: #93a1a1; }
