@@ -7,6 +7,10 @@
  *
  * Version 0.1.1
  */
+ 
+if (typeof jQuery === 'undefined') {
+	throw new Error('inputHistory requires jQuery')
+}
 
 (function($) {
 	$.fn.inputHistory = function(options) {
