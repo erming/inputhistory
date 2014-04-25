@@ -81,8 +81,8 @@
 	<script src="jquery.inputHistory.js"></script>
 	<script>
 	$(function() {
-		// Strip tabs from <pre> elements
 		$("pre").each(function() {
+			// Strip tabs from <pre> elements
 			$(this).html($(this).html().replace(/\t{4}/g, ""));
 		});
 			
