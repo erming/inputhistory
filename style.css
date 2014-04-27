@@ -1,5 +1,5 @@
 body {
-	margin: 10px 0 30px;
+	margin: 10px 0 50px;
 }
 pre {
 	overflow-x: auto;
@@ -17,6 +17,9 @@ input:valid + #label {
 }
 #content {
 	max-width: 620px;
+}
+#download .btn {
+	margin: 0 5px;
 }
 #messages {
 	color: #ccc;
@@ -42,6 +45,9 @@ input:valid + #label {
 	color: #bbb;
 	margin-top: 10px;
 	text-align: center;
+}
+#author {
+	margin-top: 2em;
 }
 
 @media (max-width: 480px) {
