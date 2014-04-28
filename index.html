@@ -124,7 +124,8 @@
 		});
 		
 		function addMessage(msg) {
-			messages.append($("<div>").html(msg));
+			var msg = $("<div>").addClass("msg").html(msg).fadeTo(0, 0.0);
+			messages.append(msg.fadeTo(200, 1.0));
 		}
 	});
 	</script>

@@ -22,7 +22,7 @@ input:valid + #label {
 	margin: 0 5px;
 }
 #messages {
-	color: #ccc;
+	color: #999;
 	height: 180px;
 	overflow-y: scroll;
 }
