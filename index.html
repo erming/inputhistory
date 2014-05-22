@@ -69,11 +69,8 @@
 				</h2>
 				<div class="text-center">
 					<div class="btns">
-					<a href="https://github.com/erming/inputHistory/archive/0.1.2.zip" class="btn btn-lg btn-success">
+					<a href="https://github.com/erming/inputHistory" class="btn btn-lg btn-success">
 						Download inputHistory
-					</a>
-					<a href="https://github.com/erming/inputHistory" target="_blank" class="btn btn-lg btn-default">
-						View on GitHub
 					</a>
 					</div>
 					<p id="version">version 0.1.2</p>
@@ -88,7 +85,7 @@
 	
 	<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
 	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-	<script src="//erming.github.io/scrollGlue/jquery.scrollGlue.js"></script>
+	<script src="//erming.github.io/stickyScroll/jquery.stickyScroll.js"></script>
 	<script src="jquery.inputHistory.js"></script>
 	<script>
 	$(function() {
@@ -119,7 +116,7 @@
 			return false;
 		});
 		
-		var messages = $("#messages").scrollGlue({
+		var messages = $("#messages").sticky({
 			speed: 200,
 		});
 		
