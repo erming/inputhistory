@@ -2,7 +2,7 @@
 <html>
 	<head>
 	
-	<title>inputHistory</title>
+	<title>inputhistory</title>
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 		<section id="title" class="row">
 			<div class="col-sm-12">
 				<h1 class="page-header text-center">
-					inputHistory <small>v0.1.2</small>
+					inputhistory <small>v0.1.2</small>
 				</h1>
 			</div>
 		</section>
@@ -26,7 +26,7 @@
 				<div class="panel panel-default">
 					<div id="messages" class="panel-body">
 						<div class="intro">Welcome!</div>
-						<div class="intro">This is the interactive demo of jquery.inputHistory.js</div>
+						<div class="intro">This is the interactive demo of inputhistory.js</div>
 						<div class="intro"></div>
 						<div class="intro">Step 1: Write something</div>
 						<div class="intro">Step 2: Press the <kbd>up</kbd> and <kbd>down</kbd> keys</div>
@@ -48,15 +48,15 @@
 				<p>Start by including <a href="http://jquery.com" target="_blank">jQuery</a> and the plugin.</p>
 				<pre class="prettyprint">
 				&lt;script src="jquery.js"&gt;&lt;/script&gt;
-				&lt;script src="jquery.inputHistory.js"&gt;&lt;/script&gt;
+				&lt;script src="inputhistory.js"&gt;&lt;/script&gt;
 				</pre>
 				<h3>Activate the plugin</h3>
-				<p>Now call <code>.inputHistory()</code> on your inputs, like this:</p>
+				<p>Now call <code>.history()</code> on your inputs, like this:</p>
 				<pre class="prettyprint">
 				&lt;script&gt;
 					// jQuery ready event
 					$(function() {
-						$('.target').inputHistory();
+						$('#input').history();
 					});
 				&lt;/script&gt;
 				</pre>
@@ -69,8 +69,8 @@
 				</h2>
 				<div class="text-center">
 					<div class="btns">
-					<a href="https://github.com/erming/inputHistory" class="btn btn-lg btn-success">
-						Download inputHistory
+					<a href="https://github.com/erming/inputhistory" class="btn btn-lg btn-success">
+						Download inputhistory
 					</a>
 					</div>
 					<p id="version">version 0.1.2</p>
@@ -85,8 +85,8 @@
 	
 	<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
 	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-	<script src="//erming.github.io/stickyScroll/jquery.stickyScroll.js"></script>
-	<script src="jquery.inputHistory.js"></script>
+	<script src="//erming.github.io/stickyscroll/stickyscroll.js"></script>
+	<script src="inputhistory.js"></script>
 	<script>
 	$(function() {
 		$("pre").each(function() {
@@ -96,7 +96,7 @@
 			
 		prettyPrint();
 		
-		var input = $("#input").inputHistory({
+		var input = $("#input").history({
 			submit: true,
 		});
 		

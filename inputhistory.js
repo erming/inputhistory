@@ -1,6 +1,6 @@
 /*!
- * inputHistory
- * https://github.com/erming/inputHistory
+ * inputhistory
+ * https://github.com/erming/inputhistory
  *
  * Copyright (c) 2014 Mattias Erming <mattias@mattiaserming.com>
  * Licensed under the MIT License.
@@ -8,7 +8,8 @@
  * Version 0.1.2
  */
 (function($) {
-	$.fn.inputHistory = function(options) {
+	$.fn.inputhistory = // Alias
+	$.fn.history = function(options) {
 		var settings = $.extend({
 			history: [],
 			submit: false,
@@ -17,7 +18,7 @@
 		var self = this;
 		if (self.size() > 1) {
 			return self.each(function() {
-				$(this).inputHistory(options);
+				$(this).history(options);
 			});
 		}
 		
