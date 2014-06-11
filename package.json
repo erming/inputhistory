@@ -2,7 +2,7 @@
   "name": "inputhistory",
   "author": "Mattias Erming",
   "version": "0.2.0",
-  "description": "",
+  "description": "Keep a history of previously entered input values.",
   "homepage": "https://github.com/erming/inputhistory",
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   "filename": "inputhistory.js",
   "license": "MIT",
   "keywords": [
+		"jquery",
+		"plugin",
     "input",
 		"history"
   ],
