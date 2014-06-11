@@ -1,15 +1,11 @@
 /*!
  * inputhistory
  * https://github.com/erming/inputhistory
- *
- * Copyright (c) 2014 Mattias Erming <mattias@mattiaserming.com>
- * Licensed under the MIT License.
- *
- * Version 0.2.0
+ * v0.2.1
  */
 (function($) {
-	$.fn.inputhistory = // Alias
-	$.fn.history = function(options) {
+	$.fn.history = // Alias
+	$.fn.inputhistory = function(options) {
 		var settings = $.extend({
 			history: [],
 			submit: false,
