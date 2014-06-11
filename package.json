@@ -20,10 +20,10 @@
   "filename": "inputhistory.js",
   "license": "MIT",
   "keywords": [
-		"jquery",
-		"plugin",
+    "jquery",
+    "plugin",
     "input",
-		"history"
+    "history"
   ],
   "dependencies": {
     "jquery": ">=1.9"
