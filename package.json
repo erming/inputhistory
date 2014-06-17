@@ -2,7 +2,7 @@
   "name": "inputhistory",
   "author": "Mattias Erming",
   "version": "0.2.1",
-  "description": "Keep a history of previously entered input values.",
+  "description": "Keep a history of previously entered input values",
   "homepage": "https://github.com/erming/inputhistory",
   "repository": {
     "type": "git",
