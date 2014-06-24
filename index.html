@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>InputHistory</title>
+
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	
+	</head>
+	<body>
+	
+	<div class="container">
+		<header id="header" class="row">
+				<div class="col-sm-12">
+					<h1>
+						InputHistory
+						<small>jQuery plugin</small>
+					</h1>
+					<h2>Keep a history of previously entered input values.</h2>
+				</div>
+		</header>
+		<div id="demo" class="row">
+			<div class="col-sm-12">
+				<h3>Write something:</h3>
+				<div id="help">
+					<div class="help-1">Now press <kbd>enter</kbd></div>
+					<div class="help-2">.. and now press the <kbd>up</kbd> key</div>
+				</div>
+				<input id="input">
+			</div>
+		</div>
+		<div id="download" class="row">
+			<div class="col-sm-12">
+				<a href="http://github.com/erming/inputhistory" class="btn green">
+					Download
+				</a>
+			</div>
+		</div>
+		<footer id="footer" class="row">
+				<div class="col-sm-12">
+					<small>
+						inputhistory is <a href="http://github.com/erming/inputhistory">open source</a>
+						<br>Made by <a href="http://github.com/erming">erming</a>
+					</small>
+				</div>
+		</footer>
+	</div>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="src/inputhistory.js"></script>
+
+	<script>
+	$(function() {
+		var input = $("#input").inputhistory()
+		
+		// Focus input on page load.
+		input.focus();
+		
+		// Prevent page refresh.
+		$("form").on("submit", function() {
+			return false;
+		});
+		
+		var step = 0;
+		var h1 = $(".help-1");
+		var h2 = $(".help-2");
+		input.on("input", function() {
+			if (input.val() == "") {
+				h1.css({"margin-top": "20px"});
+				if (step == 1) {
+					step = 0;
+				}
+			} else if (step == 0) {
+				h1.css({"margin-top": "60px"});
+				step = 1;
+			}
+		}).on("keydown", function(e) {
+			// 13 = Enter
+			// 38 = Up
+			if (e.which == 13) {
+				if (step == 1) {
+					h1.css({"opacity": 0});
+					h2.css({"margin-top": "60px"});
+					step = 2;
+				}
+			} else if (e.which == 38) {
+				if (step == 2) {
+					h2.css({"opacity": 0});
+					step = 3;
+				}
+			}
+		});
+	});
+	
+	</script>
+
+	</body>
+</html>

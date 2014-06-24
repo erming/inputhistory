@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+	font: 16px Lato, sans-serif;
+	margin: 100px 0;
+}
+a {
+	color: inherit;
+	transition: all .2s;
+}
+a:hover {
+	color: #00c165;
+	text-decoration: none;
+}
+h1,
+h2 {
+	font: 300 54px Lato, sans-serif;
+	margin: 0 0 25px;
+	line-height: 1.5;
+}
+h1 {
+	color: #2c3e50;
+}
+h1 small {
+	color: #d0d5d7;
+	display: block;
+	font-size: 26px;
+	font-weight: 300;
+	margin-top: .6em;
+}
+h2 {
+	color: #7f8c8d;
+	font-size: 26px;
+}
+h3 {
+	color: #95a5a6;
+	font-size: 18px;
+}
+input {
+	border: 2px solid #e9ecef;
+	border-radius: 4px;
+	font-size: 24px;
+	outline: 0;
+	padding: 10px 14px;
+	transition: all .2s;
+	-webkit-appearance: none;
+	width: 100%;
+}
+input:hover,
+input:focus {
+	border-color: #bdc3c7;
+}
+.btn {
+	border: 2px solid #95a5a6;
+	border-radius: 5px;
+	color: #95a5a6;
+	display: inline-block;
+	font: bold 12px Lato, sans-serif;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	padding: 12px 18px;
+	text-transform: uppercase;
+	transition: all .2s;
+	word-spacing: 3px;
+}
+.btn:hover {
+	background: #95a5a6;
+	color: #fff;
+}
+.btn:active {
+	box-shadow: none;
+	opacity: .8;
+}
+.btn.blue {
+	border-color: #3498db;
+	color: #3498db;
+}
+.btn.blue:hover {
+	background: #3498db;
+	color: #fff;
+}
+.btn.green {
+	border-color: #00c165;
+	color: #00c165;
+}
+.btn.green:hover {
+	background: #00c165;
+	color: #fff;
+}
+.container {
+	max-width: 460px;
+}
+#header {
+	text-align: center;
+}
+#header h2:after,
+#header h2:before {
+	content: "\"";
+}
+#help {
+	color: #34495e;
+}
+#help kbd {
+	background: #34495e;
+	margin: 0 3px;
+}
+#help .help-1,
+#help .help-2 {
+	margin-top: 20px;
+	position: absolute;
+	right: 26px;
+	text-align: right;
+	transition: all .7s;
+	z-index: -1;
+}
+#download {
+	margin-top: 60px;
+	text-align: center;
+}
+#footer {
+	margin-top: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#footer small {
+	color: #bec5d0;
+	font: 12px Lato, sans-serif;
+	word-spacing: 2px;
+}
+
+@media (max-width: 767px) {
+	body {
+		margin-top: 50px;
+	}
+	h1 {
+		font-size: 46px;
+	}
+}
