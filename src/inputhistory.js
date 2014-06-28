@@ -4,12 +4,18 @@
  * v0.2.1
  */
 (function($) {
+	$.inputhistory = {};
+	$.inputhistory.defaultOptions = {
+		history: [],
+		preventSubmit: true
+	};
+	
 	$.fn.history = // Alias
 	$.fn.inputhistory = function(options) {
-		var settings = $.extend({
-			history: [],
-			submit: false,
-		}, options);
+		options = $.extend(
+			$.inputhistory.defaultOptions,
+			options
+		);
 		
 		var self = this;
 		if (self.size() > 1) {
@@ -18,24 +24,23 @@
 			});
 		}
 		
-		self.data('history', settings.history.concat(['']));
+		var history = options.history;
+		history.push("");
 		
 		var i = 0;
-		self.on('keydown', function(e) {
-			var history = self.data('history');
+		self.on("keydown", function(e) {
 			var key = e.which;
 			switch (key) {
-			
 			case 13: // Enter
-				if (self.val() != '') {
+				if (self.val() != "") {
 					i = history.length;
 					history[i - 1] = self.val();
-					history.push('');
+					history.push("");
 				}
-				if (settings.submit) {
-					self.parents('form').eq(0).submit();
+				if (!options.preventSubmit) {
+					self.parents("form").eq(0).submit();
 				}
-				self.val('');
+				self.val("");
 				break;
 			
 			case 38: // Up
@@ -51,10 +56,9 @@
 			
 			default:
 				return;
-			
 			}
 			
-			return false;
+			e.preventDefault();
 		});
 		
 		return this;

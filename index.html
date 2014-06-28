@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="style.css">
 	
 	</head>
-	<body>
+	<body class="preload">
 	
 	<div class="container">
 		<header id="header" class="row">
@@ -56,15 +56,13 @@
 
 	<script>
 	$(function() {
+		setTimeout(function() {
+			// Enable transitions.
+			$(".preload").removeClass("preload");
+		}, 500);
+		
 		var input = $("#input").inputhistory()
-		
-		// Focus input on page load.
 		input.focus();
-		
-		// Prevent page refresh.
-		$("form").on("submit", function() {
-			return false;
-		});
 		
 		var step = 0;
 		var h1 = $(".help-1");
