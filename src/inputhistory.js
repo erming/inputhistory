@@ -1,7 +1,7 @@
 /*!
  * inputhistory
  * https://github.com/erming/inputhistory
- * v0.2.1
+ * v0.3.0
  */
 (function($) {
 	$.inputhistory = {};
