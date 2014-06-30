@@ -36,6 +36,10 @@
 					i = history.length;
 					history[i - 1] = self.val();
 					history.push("");
+					if (history[i - 1] == history[i - 2]) {
+						history.splice(-2, 1);
+						i--;
+					}
 				}
 				if (!options.preventSubmit) {
 					self.parents("form").eq(0).submit();
