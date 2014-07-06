@@ -7,7 +7,7 @@
 	$.inputhistory = {};
 	$.inputhistory.defaultOptions = {
 		history: [],
-		preventSubmit: true
+		preventSubmit: false
 	};
 	
 	$.fn.history = // Alias
