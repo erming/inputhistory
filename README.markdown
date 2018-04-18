@@ -1,7 +1,7 @@
 ## Demo
 
 A GitHub-hosted demo can be found here:  
-[View project page](http://erming.github.io/inputhistory/)
+[View project page](http://inputhistory.erming.io/)
 
 ## Install
 
